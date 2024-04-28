@@ -11,13 +11,13 @@
 .header__logo__img {
   grid-area: header-logo;
   position: absolute; /* Position the logo absolutely relative to the header */
-  width: 6rem; /* Set a fixed width */
-  height: 6rem; /* Set a fixed height to maintain a circle */
+  width: 7rem; /* Set a fixed width */
+  height: 7rem; /* Set a fixed height to maintain a circle */
   border-radius: 50%; /* Creates the circular shape */
   object-fit: contain; /* Ensures the image fits without being cropped */
   z-index: 2; /* Higher than the z-index of any other elements in the header */
-  top: 1rem; /* Align to the top of the header */
-  left: 1rem; /* Give some space from the left edge of the header */
+  top: 0.3rem; /* Align to the top of the header */
+  left: 0.3rem; /* Give some space from the left edge of the header */
   transition: transform 0.3s ease; /* Animation timing */
   cursor: pointer; /* Changes the cursor on hover to indicate interactivity */
 }
@@ -72,15 +72,15 @@
 }
 
 
-@media (min-width: 44rem) {
+@media (min-width: 66rem) {
   .header{
     grid-template-columns: auto 1fr;
     padding-bottom: 0rem;
   }
 
   .header__logo__img {
-    width: 10rem;
-    height: 10rem; /* Set a fixed height to maintain a circle */
+    width: 9rem;
+    height: 9rem; /* Set a fixed height to maintain a circle */
   }
 
   .header__title {

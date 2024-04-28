@@ -1,5 +1,6 @@
 import '../css/AboutMe.css';
-import { useState, useRef, useId } from 'react';
+import { useState } from 'react';
+import { useRef, useId } from 'react';
 import Button from './Button';
 
 function AboutMe(){
@@ -7,7 +8,6 @@ function AboutMe(){
     const [isSend, setIsSend] = useState(false);
     const dialogRef = useRef(null);
     const id = useId();
-
     const content = (<div className='thanksText'>
         Thanks for reaching out to me, {Name}
             <button className="contact_button" onClick={() => setIsSend(false)}> Close </button> 
@@ -60,8 +60,9 @@ function AboutMe(){
            setIsEmailEmpty(false);
        }
    }
-
     return(
+      
+
 
         <main className="main" id="main-content">
             <div className="sections" id="aboutMe">
@@ -92,7 +93,7 @@ function AboutMe(){
                         <p className='major'>Doctor of Philosophy in Engineering (Incomplete)</p>
                         </div>
                     </div>
-                </div>
+                    </div>
 
 
  
@@ -174,7 +175,7 @@ function AboutMe(){
                 <Button className="cancel_button" type="button" visual ="button" text="Cancel" onClick={() => dialogRef.current.close()}/>
             </form>
         </dialog>
-    </div>
+        </div>
                                      
 
           

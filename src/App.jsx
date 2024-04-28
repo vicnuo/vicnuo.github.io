@@ -15,25 +15,31 @@ function App() {
 
   useEffect(() => {
     function handlePageChange() {
-      setPage(document.location.pathname); // 根据当前的路径设置页面
+      const path = window.location.hash.slice(1) || '/about';
+      setPage(path); // 更新状态以反映当前页面
     }
-    handlePageChange(); // 设置初始页面
+    handlePageChange(); // 在组件加载时设置初始页面
 
-    window.addEventListener("popstate", handlePageChange);
+    window.addEventListener("hashchange", handlePageChange); // 监听 URL 的哈希变化
     return () => {
-      window.removeEventListener("popstate", handlePageChange);
+      window.removeEventListener("hashchange", handlePageChange);
     };
-  }, []); // Important to have empty dependency array!
-
+  }, []);
+  
   const themeChange = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
+  const navigate = (path) => {
+    window.history.pushState(null, '', `#${path}`); // 更新 URL 的哈希部分，但不加载页面
+    setPage(path); // 同步更新页面状态
+  };
+
   return (
     <div className={`app ${theme}-theme`}>
-      <Header  setPage={setPage} themeChange={themeChange} />
-      <MainArea page={page} setPage={setPage} />
-      <Footer setPage={setPage} />
+      <Header setPage={navigate} themeChange={themeChange} />
+      <MainArea page={page} setPage={navigate} />
+      <Footer setPage={navigate} />
     </div>
   );
 }

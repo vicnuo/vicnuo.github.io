@@ -179,7 +179,7 @@
   }
   
   
-  @media (max-width: 60rem) {
+  @media (max-width: 70rem) {
     body {
       font-size: 0.9rem; /* 减小字体大小 */
     }
