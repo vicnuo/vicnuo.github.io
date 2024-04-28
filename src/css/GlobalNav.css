@@ -1,0 +1,123 @@
+.global-nav {
+    grid-column: span 1;
+    list-style-type: none;
+    display: grid; 
+
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+
+#menuToggle{
+    margin-right: 1rem;
+    height: 150px;
+    cursor: pointer;
+    margin-left: auto;
+    
+    border: none;
+    left: 1rem;
+    bottom: 1rem;
+    background-color: var(--color-header-bg);
+}
+
+.global-nav__list a:hover{
+    background-color: var(--color_hover_color);
+}
+
+.global-nav__list { 
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    margin: 0;
+    /* padding: 0.5rem; */
+    position: absolute;
+    z-index: 1000;
+    top: 110px; /* Adjust as needed based on where your hamburger icon is */
+    right: 0;
+
+    list-style-type: none;
+    background-color: var(--color-header-bg);
+}
+
+.global-nav__link {
+    display: inline-block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.35rem;
+    color: var(--font__color);
+}
+
+.global-nav__list--collapsed {
+    display: none;
+}
+
+.global-nav__list__open{
+    max-height: 1000px;
+}
+
+.gg-menu {
+    /* transform: scale(var(--ggs,1)); */
+    position: relative;
+    border: none;
+    outline: none;  /* Remove default outline */
+}
+
+.gg-menu,
+.gg-menu::after,
+.gg-menu::before {
+    display: block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 2px;
+    border-radius: 3px;
+    background: currentColor;
+    cursor: pointer;
+    right:0;
+}
+.gg-menu::after,
+.gg-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px
+}
+.gg-menu::after {
+    top: 6px
+}
+
+
+@media (min-width: 44rem) {
+    .global-nav{
+        grid-column: span 2;
+        list-style-type: none;
+        margin-left: 0;
+        display: grid;
+        position: relative; /* This is only needed if you're going to use z-index */
+        z-index: 1; /* Lower than the z-index of .header__logo */
+    }
+
+    .global-nav__list {
+        background-color: var(--color-header-bg);
+        position: static;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: smaller;
+    }
+
+    #menuToggle {
+        display: none;
+    }
+
+    .global-nav__list--collapsed {
+        display: flex;
+    }
+}
+
+
+@media(prefers-reduced-motion: no-preference){
+    .global-nav__list{
+        transition: max-height 1s;
+    }
+}

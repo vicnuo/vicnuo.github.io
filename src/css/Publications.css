@@ -1,0 +1,20 @@
+.main-area {
+    grid-column: span 12;
+    background-color: var(--color-page-bg);
+}
+
+.content {
+    padding-bottom: 2rem;
+}
+
+.parts {
+    margin: 3rem;
+    padding: 2rem;
+    background-color: var(--color-card-bg);
+    transition: transform 0.3s ease; 
+    cursor: pointer; 
+}
+
+.parts:hover {
+    transform: scale(1.05); 
+  }

@@ -1,0 +1,132 @@
+#main-content{
+    background-color: var(--color-page-bg);
+}
+
+.boldArrow{
+    font-weight: 900;
+    /* font-size: large; */
+}
+
+#sortButton {
+    position: absolute;
+    right: 0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border: none;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: var(--button__color);
+    color: var(--button_text_color);
+    border-radius: 0.5rem;
+}
+
+.cards {
+    display: grid;
+    gap: 7rem;
+    padding: 4rem 1rem 4rem 1rem;
+    justify-content: center;
+    justify-items: end;
+}
+
+.card img {
+    transition: transform 0.3s ease; /* Animation timing */
+    cursor: pointer; /* Changes the cursor on hover to indicate interactivity */
+}
+
+.card img:hover {
+    transform: scale(1.05); /* Scales up the card to 105% of its size */
+}
+
+.image_UX, .image_Cloud-Native, .image_news_aggregator {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 78%;
+    height: auto;
+}
+
+.card__title {
+    text-align: center;
+    padding: 2rem 1rem 0rem ;
+    line-height: 2rem;  
+}
+
+.card__content {
+    display: inline-block;
+    line-height: 2rem;
+    padding: 1.5rem;
+}
+
+.favor {
+    /* height: 2rem; */
+    width: 6rem;
+    color: var(--button_text_color);
+    padding: 0;
+    border-radius: 0.5rem;
+    border: none;
+    line-height: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    
+@media (min-width: 44rem){
+    .card-text{
+        text-align: left;
+        /* width: 40rem; */
+    }
+
+    .cards {
+        display: grid;
+        gap: 7rem;
+        padding: 3.5rem;
+        justify-content: center;
+        justify-items: end;
+    }
+      
+    .card{
+        display: grid;
+        grid-template-columns: 6fr 5fr 0.5fr; /* 按照1:3:1的比例划分列 */
+        align-items: center; /* 垂直居中网格内的所有项目 */
+        padding: 2rem;
+        position: relative; /* 确定相对定位上下文 */
+        margin-bottom: 0rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+      
+    .card__title, .card__content {
+        text-align: left;
+        padding: 0.5rem 0;
+        line-height: 2rem;  
+    }
+
+    .image_Cloud-Native {
+        justify-self: center;  
+        object-fit: contain;
+        width: 80%; /* 宽度会自动按比例调整 */
+        height: auto;
+    }
+    
+    .image_news_aggregator {
+        justify-self: center;  
+        object-fit: cover;
+        object-position: center top; /* 将图片定位到上半部分 */
+        width: 78%; /* 宽度会自动按比例调整 */
+        height: auto;
+    }
+    
+    .image_UX {
+        justify-self: center;  
+        object-fit: contain;
+        width: 80%; /* 宽度会自动按比例调整 */
+        height: auto;
+    } 
+
+    .favor {
+        position: absolute;
+        right: 1rem; /* 距离卡片右边缘的距离 */
+        bottom: 1rem; /* 距离卡片底边缘的距离 */
+    }
+
+}
+

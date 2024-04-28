@@ -1,0 +1,135 @@
+/* General styles for the form area */
+.contact_form_container {
+    
+    max-width: 30rem; 
+    margin: 5rem auto;
+    padding: 3rem 1rem 3rem 1rem;
+    border-radius: 0.5rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  /* Style for the form header */
+  .contact_form_header {
+    color:var(--font__color);
+    font-size: 2.5rem; /* Increase the size to make it more prominent */
+    text-align: center;
+    display: block; /* Allows us to set dimensions */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* A modern, clean font family */
+    font-weight: bold; /* Make it bold for added emphasis */
+    padding-bottom: 1rem; /* Add some space below the header */
+    margin-bottom: 3rem; /* Space before the form starts */
+    text-transform: uppercase; /* Stylistic choice to make it uppercase */
+    letter-spacing: 0.1em; /* Add letter spacing for a more sophisticated look */
+    border-bottom: 3px solid #0056b3; /* Add a border to underline the header */
+    margin-top: 2rem; /* Add space above the header */
+    border-radius: 5px; /* Round the corners */
+    padding: 1rem; /* Padding inside the background color */
+  }
+  
+  
+  /* Grid setup for label-input pairs */
+  .contact_form_row {
+    display: grid;
+    grid-template-columns: 3fr 8fr 1fr;
+    grid-gap: 1rem; /* Adjust the gap size as needed */
+    align-items: center; /* Aligns items vertically */
+
+    flex-wrap: wrap;
+    margin-bottom: 0.9375rem; /* 15px */
+   
+  }
+  
+  .contact_form_label,
+  .contact_form_input,
+  .contact_form_textarea {
+    box-sizing: border-box;
+  }
+  
+  /* Styles for labels */
+  .contact_form_label {
+    color: var(--font__color);
+   
+   padding-right: 2rem;
+   
+    margin-right: 2%; /* spacing between label and input */
+    text-align: left; /* aligns text to the right of the label */
+    align-self: center; /* vertically centers the text in the flex container */
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  /* Styles for inputs and textarea */
+  .contact_form_input,
+  .contact_form_textarea {
+    padding: 0.5rem;
+    border: 0.05rem solid #ccc;
+    border-radius: 0.25rem;
+    background-color: white;
+
+  }
+  
+  /* Specific styles for the textarea */
+  .contact_form_textarea {
+    height: 6.25rem;
+    resize: vertical;
+  }
+  
+  /* Styles for the submit button */
+  .contact_form_button,.close_button {
+    padding: 1rem 2rem; /* Spacious padding for better clickability */
+    background-color: #007bff; /* Use a distinctive color for action items */
+    color: white; /* Text color that contrasts well with the button color */
+    text-transform: uppercase; /* Stylistic choice for CTA buttons */
+    font-weight: bold; /* Makes the text stand out */
+    font-size: 1.2rem; /* Large enough to be easily readable */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    text-align: center; /* Center the text within the button */
+    cursor: pointer; /* Change the mouse pointer to signify it's clickable */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow to lift the button off the page */
+    border: none; /* Remove the border for a flat design */
+    text-decoration: none; /* Remove text decoration in case it's a link */
+    margin-top: 2rem;
+    display: block; /* Allows us to set dimensions */
+    margin-left: auto;
+    margin-right: auto;
+  }
+ 
+
+  
+  
+  .close_button:hover,
+.contact_form_button:hover  {
+    background-color: #0056b3; /* Darker shade when hovered or focused for interaction feedback */
+    transform: translateY(-2px); /* Slightly raise the button when hovered or focused */
+    outline: none; /* Remove outline when focused (should be handled with custom styles for accessibility) */
+  }
+
+.thanksText{
+  color:var(--font__color);
+    font-weight: bold; /* Makes the text stand out */
+    font-size: 1.2rem; /* Large enough to be easily readable */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    text-align: center; /* Center the text within the button */
+    margin: 0 auto;
+ 
+
+}
+.formData_name {
+  font-weight: bold; /* Make the name bold */
+  color: #4A90E2; /* A distinct color */
+  padding: 0.25rem; /* Add some space around the name */
+  border-radius: 4px; /* Optional: round the corners */
+  background-color: #E1ECF4; /* A subtle background color */
+  margin: 0 0.5rem; /* Add some margin to the left and right */
+}
+
+
+  
+  .required_asterisk {
+    color: #ff0000;
+  }
+  
+  

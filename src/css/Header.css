@@ -1,0 +1,92 @@
+.header {
+  display: grid;
+  grid-template-areas: 
+    "header-logo header-title global-nav";
+  grid-template-columns: max-content 1fr;
+  background-color: var(--color-header-bg);
+  color: var(--font__color);
+  position: relative; 
+} 
+
+.header__logo__img {
+  grid-area: header-logo;
+  position: absolute; /* Position the logo absolutely relative to the header */
+  width: 6rem; /* Set a fixed width */
+  height: 6rem; /* Set a fixed height to maintain a circle */
+  border-radius: 50%; /* Creates the circular shape */
+  object-fit: contain; /* Ensures the image fits without being cropped */
+  z-index: 2; /* Higher than the z-index of any other elements in the header */
+  top: 1rem; /* Align to the top of the header */
+  left: 1rem; /* Give some space from the left edge of the header */
+  transition: transform 0.3s ease; /* Animation timing */
+  cursor: pointer; /* Changes the cursor on hover to indicate interactivity */
+}
+
+.header__logo__img:hover {
+  transform: scale(1.05); /* Scales up the card to 105% of its size */
+}
+
+
+#logo_link:hover{
+  background-color: var(--color-header-bg);
+}
+
+.header__title {
+  text-align: center;
+  margin: 0;
+  font-size: 3rem;
+  padding: 2rem 0rem 2rem 4.5rem;
+}
+
+.user_status{
+  grid-row: span 1;
+  text-align: right;
+}
+
+.change_theme_button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 8px 16px; /* Spacious padding for a larger clickable area */
+  color: var(--button_text_color); /* Text color for readability */
+  border: none; /* No border for a clean, modern look */
+  border-radius: 5px; /* Rounded corners for a friendly appearance */
+  font-size: 1rem; /* Large enough text to be easily clickable */
+  font-weight: bold; /* Bold text for readability and importance */
+  text-transform: uppercase; /* Uppercase text for a button-like appearance */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* A subtle shadow for depth */
+  cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transitions for interactive effects */
+  text-decoration: none; /* No underline */
+}
+
+.change_theme_button:hover {
+  background-color: rgb(247, 181, 204);  /* Darker shade on hover for a dynamic effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover for a 'lifting' effect */
+  transform: translateY(-2px); /* Slightly move the button up to simulate a button press */
+}
+
+.change_theme_button:focus {
+  outline: none; /* Remove the focus outline - only if you are providing a visual cue for focus */
+  /* You can add a focus ring or change the box-shadow to provide visual feedback for keyboard navigation */
+}
+
+
+@media (min-width: 44rem) {
+  .header{
+    grid-template-columns: auto 1fr;
+    padding-bottom: 0rem;
+  }
+
+  .header__logo__img {
+    width: 10rem;
+    height: 10rem; /* Set a fixed height to maintain a circle */
+  }
+
+  .header__title {
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+    padding: 2.5rem 5rem 1.5rem 5rem;
+  }
+}

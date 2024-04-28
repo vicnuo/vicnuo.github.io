@@ -1,0 +1,86 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+  
+.light-theme{
+  --color-page-bg: rgb(233, 246, 250);
+  --color-card-bg: rgb(206, 244, 255);
+  --color-header-bg: rgb(124, 215, 243);
+  --color_hover_color: rgb(80, 160, 185);
+  --warning__color:red;
+  --font__color: black;
+  --button__color:#5fa9c2;
+  
+  --button_text_color: white;
+ --change_theme_button_text_color: white;
+ --education__color: #888888;
+ --section__title__color: black;
+
+}
+
+.dark-theme{
+  --color-page-bg: rgb(91, 174, 199);
+  --color-card-bg: rgb(78, 152, 175);
+  --color-header-bg: rgb(44, 106, 125);
+  --color_hover_color: rgb(0, 44, 58);
+  --warning__color:red;
+  --font__color: white;
+  --button__color:rgb(222, 253, 255);
+  --button_text_color: rgb(9, 44, 46);
+  --education__color:  rgb(215, 213, 213);
+  --section__title__color: white;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--color-page-bg);
+}
+
+.app{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 0px;
+  min-height: 100vh;
+  background-color:var(--color-page-bg);
+}
+
+
+
+a{
+  color: var(--nav__link__color);
+}
+
+button {
+  background-color: var(--button__color);;
+  color: var(--change_theme_button_text_color);
+}
+
+#sortButton {
+  background-color: var(--button__color);;
+  color: var(--button_text_color);
+}
+
+input{
+  color: var(--font__color);
+  background-color:var(--color-page-bg);
+}
+
+span{
+  color: var(--font__color);
+}
+
+h1{
+  color: var(--font__color);
+}
+
+h2{
+  color: var(--font__color);
+}
+
+p{
+  color: var(--font__color);
+}
+
+

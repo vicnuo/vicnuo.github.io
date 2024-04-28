@@ -1,0 +1,30 @@
+
+
+.link{
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size:large;
+}
+
+.send_button{
+    margin-left: unset;
+    margin-right: unset;
+    width: unset;
+    grid-column: span 6;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    border-radius:0.5rem ;
+}
+
+.cancel_button{
+    margin-left: unset;
+    margin-right: unset;
+    width: unset;
+    grid-column: span 6;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    border-radius:0.5rem ;
+}

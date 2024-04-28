@@ -1,0 +1,106 @@
+.resume {
+    color: var(--font__color); 
+}
+
+.content__img{
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+    
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.experience {
+    padding: 3rem 3rem; /* Adjust padding as needed */
+    margin-bottom: 0rem; /* Space between sections */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.experience p {
+    display: block; /* Revert to block to align with your layout */
+    margin-bottom: 0.5rem; /* Space after each paragraph */
+}
+
+.company__name,
+.company__location {
+    display: inline; /* Inline display to keep on the same line */
+    margin-right: 0.5rem; /* Space between company name and location */
+    font-size: 1.2rem; /* Adjust font size as needed */
+}
+
+
+.company__location,
+.company__enrollment {
+  color: var(--education__color);
+  padding-left: 0.5rem;
+}
+
+
+
+.company__enrollment {
+    float: right; /* Align to the right of the container */
+    font-style: italic;
+}
+
+.title {
+    display: block; /* Ensure the title is on its own line */
+    font-size: 1.1rem;
+    font-weight: bold; 
+    margin-bottom: 0.5rem; /* Space before the list */
+    margin-top: 0.5rem;
+    font-style: italic;
+    width: 100%; /* Takes the full width to ensure it is on the next line */
+    padding-top: 0.5rem;
+}
+
+ul {
+  
+    padding: 0; /* Align with the title */
+    margin-top: 0; /* Remove default top margin to align with the title */
+    margin-left: 10rem;
+    margin-right: 5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Clear floats after each section to maintain layout */
+.experience:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 50rem) {
+    /* Smaller screens */
+    .company__enrollment {
+        float: none;
+        display: block; /* Place the date below the company name and location */
+        text-align: left; /* Align right on smaller screens */
+        margin-top: 0.5rem;
+        padding-left: 0;
+    }
+
+    .experience {
+        padding: 1rem;
+    }
+
+    ul {
+        margin-left: 5rem;
+        margin-right: 2rem;
+    }
+
+    .experience__text {
+        padding: 1rem 2rem;
+    }
+
+    .title {
+        padding: 0.5rem 2rem 1rem 2rem;
+    }
+
+}

@@ -1,0 +1,21 @@
+.footer {
+    background-color: var(--color-header-bg);
+    
+    list-style-type: none; 
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: 0;
+    padding: 1rem;
+}
+
+.footer-link { 
+    margin: 0;
+    padding: 0.3rem;
+    color:var(--font__color);
+}
+
+.footer-link:hover {
+    background-color: var(--color_hover_color);
+}

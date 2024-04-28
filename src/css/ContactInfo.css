@@ -1,0 +1,208 @@
+h2 {
+    text-align: center;
+    padding: 3rem;  
+}
+
+.content__subtitle {
+    text-align: left;
+    padding: 1rem 6rem; 
+    color: var(--font__color);
+}
+
+p {
+    text-align: left;
+    padding: 1rem 6rem; 
+}
+
+.content__list {
+    text-align: left;
+    padding: 0 6rem 1rem ;
+    color: var(--font__color);
+}
+
+.content__panels {
+    padding-bottom: 1.5rem;
+}
+
+.privacy__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content__title {
+    padding: 3rem;
+}
+
+.contact__title {
+    display: grid;
+    padding-bottom: 1rem;
+}
+
+.content__box {
+    padding: 2rem;
+}
+
+.email__icon {
+    margin: 1rem;
+    aspect-ratio: 1/1;
+    /* object-fit: cover; */
+    height: fit-content;
+    height: 20px;
+    width: 30px;
+}
+
+.location__icon, .GitHub__icon, .Linkedin__icon {
+    margin: 1rem;
+    aspect-ratio: 1/1;
+    /* object-fit: cover; */
+    height: fit-content;
+    height: 30px;
+    width: 30px;
+}
+
+.email__address, .location__address, 
+.github__address, .linkedin__address {
+    display: flex; /* To align icon and text horizontally */
+    align-items: center; /* Aligns items vertically within each div */
+    color: var(--font__color)
+}
+
+.address {
+    padding: 0;
+}
+
+.location_img {
+    object-fit: cover;
+    height: 400px;
+    width: 600px;
+}
+
+
+
+.skip-to-content-link {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transition: transform 0.3s;
+    background-color: var(--color-page-bg);
+  }
+  
+  .skip-to-content-link:focus {
+    transform: translate(-50%, 0%);
+  }
+  
+  .contact-form{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .contact-button{
+    margin-left: 3rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    border-color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--button__color);
+    color: var(--button_text_color);
+  }
+  
+  .contact-form__input--email, .contact-form__input--name{
+    grid-column: span 12;
+    text-align: center;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 0.5rem;
+  }
+  
+  .label_email, .label_name{
+    grid-column: span 1;
+    text-align: left;
+  }
+  
+  .require_mark{
+    grid-column: span 1;
+    font-style: italic;
+    text-align: left;
+  }
+  
+  .input_email, .input_name{
+    grid-column: span 3;
+  }
+  
+  .error--name, .error--email{
+    grid-column: span 3;
+    color: var(--warning__color);
+    text-align: left;
+    font-size: smaller;
+  }
+  
+  .send_button, .cancel_button{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+    border-color: white;
+    font-size: 1rem;
+  }
+  
+  .thanksText{
+    font-size: 1.25rem;
+  }
+  
+
+
+.form{
+    height: 20rem;
+    width: 25rem;
+    border: 2px solid black;
+    background-color: var(--color-card-bg);
+    margin: auto;
+  }
+  
+  .form::backdrop {
+    background-color: black;
+    opacity: 50%;
+  }
+  
+  .form_title{
+    text-align: center;
+    padding: 1rem;
+  }
+  
+@media (max-width: 50rem) {
+    .contact__container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        padding: 4rem 2rem;
+    }
+
+    .content__box {
+        display: grid;
+        grid-column: span 6;
+        justify-content: start;
+        align-content: space-around;
+    }
+
+    .contact__title {
+        display: grid;
+        grid-column: span 6;
+        justify-content: end;
+        align-items: start;
+        padding-top: 1rem;
+        padding-right: 5rem;
+    }
+
+    .content__text, .content__subtitle {
+      padding: 1rem 2rem 1rem 2rem;
+    }
+
+    .content__list {
+      padding: 0;
+    }
+}
